@@ -5,14 +5,14 @@
 # --------------------------------------------
 
              # Facebook Constants
-             
+
              #  LIVE
 # APP_NAME = "sutalks"
 # APP_ID = "168684223172954"
 
               # DEVELOPMENT
 APP_NAME = "sutalktest"
-APP_ID = "185866364769116"
+APP_ID = "208252125876381"
 
 
 
