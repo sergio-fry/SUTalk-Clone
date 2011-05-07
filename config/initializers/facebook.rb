@@ -11,7 +11,7 @@
 # APP_ID = "168684223172954"
 
               # DEVELOPMENT
-APP_NAME = "sutalktest"
+APP_NAME = "sutalk_r_wilco"
 APP_ID = "208252125876381"
 
 
