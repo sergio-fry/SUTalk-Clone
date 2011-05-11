@@ -3,17 +3,17 @@
   <head>
     <title><%= title %></title>
     <%= csrf_meta_tag %>
-		<%= render 'layouts/javascript' %>
-		<%= render 'layouts/stylesheets' %>		
+    <%= render 'layouts/javascript' %>
+    <%= render 'layouts/stylesheets' %>
   </head>
   <body>
-		<%= render 'layouts/facebook_javascript_sdk' %>
+    <%= render 'layouts/facebook_javascript_sdk' %>
     <div class="container">
-			<%= render 'layouts/header' %>
+      <%= render 'layouts/header' %>
       <section class="round">
-        <%= yield %>
+      <%= yield %>
       </section>
-			<%= render 'layouts/footer' %>
+      <%= render 'layouts/footer' %>
     </div>
   </body>
 </html>
