@@ -10,7 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110315184642) do
+ActiveRecord::Schema.define(:version => 20110511084052) do
+
+  create_table "fb_requests", :force => true do |t|
+    t.string   "request_id"
+    t.string   "sid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "presences", :force => true do |t|
     t.integer  "room_id"
@@ -38,7 +45,7 @@ ActiveRecord::Schema.define(:version => 20110315184642) do
   end
 
   create_table "users", :force => true do |t|
-    t.integer  "facebook_id"
+    t.string   "facebook_id"
     t.string   "name"
     t.string   "first_name"
     t.string   "last_name"
