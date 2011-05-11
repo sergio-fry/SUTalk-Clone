@@ -19,7 +19,7 @@ class Facebook
   end
 
   def createTestAccount
-    request_url = "https://graph.facebook.com/#{APP_ID}/accounts/test-users?installed=true&permissions=read_stream&method=post&access_token=#{@token}"
+    request_url = "https://graph.facebook.com/#{APP_ID}/accounts/test-users?installed=true&permissions=read_stream&method=post&access_token=#{URI.escape(@token)}"
     test_account = RestClient.get request_url
     ActiveSupport::JSON.decode test_account
   end
