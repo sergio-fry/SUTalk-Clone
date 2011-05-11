@@ -18,12 +18,6 @@ class Facebook
     @friendsRandom = getFriendsRandom
   end
 
-  def createTestAccount
-    request_url = "https://graph.facebook.com/#{APP_ID}/accounts/test-users?installed=true&permissions=read_stream&method=post&access_token=#{URI.escape(@token)}"
-    test_account = RestClient.get request_url
-    ActiveSupport::JSON.decode test_account
-  end
-
   # get facebook oauth url
   def getOauthUrl params
     api = Sutalk::Application.config.facebook_api
@@ -88,6 +82,17 @@ class Facebook
     ActiveSupport::JSON.decode friends
   end
 
+  def getAppRequest(request_id)
+    request = RestClient.get "https://graph.facebook.com/#{request_id}", {:params => {:access_token => token}}
+
+    #begin
+    #  RestClient.get "https://graph.facebook.com/#{request_id}", {:params => {:access_token => token, :method => "delete"}}
+    #rescue Exception => e
+    #  raise e.to_json
+    #end
+
+    ActiveSupport::JSON.decode request
+  end
 
   protected
 
